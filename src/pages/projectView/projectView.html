@@ -1,0 +1,76 @@
+<div class="content">
+	
+
+
+	<div class="script-card mdl-card mdl-shadow--2dp mdl-grid">
+	  <div class="mdl-cell mdl-cell--12-col mdl-card__title {{autoType}}">
+	  	<h2 class="mdl-card__title-text">{{autoType}}</h2>
+	  </div>
+	  <div class="script-list mdl-cell mdl-cell--6-col">
+	  	<ul class="mdl-list">
+			<li *ngFor="let script of project.scripts" class="mdl-list__item mdl-list__item--two-line">
+				<span class="mdl-list__item-primary-content">
+				 <i class="material-icons mdl-list__item-avatar {{autoType}}"></i>
+				 
+				 <span id="script-title" >{{script.name}}</span>
+				 
+				</span>
+				<span class="mdl-list__item-secondary-action">
+			     <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{script.name}}">
+			        <input type="checkbox" [(ngModel)]="script.checked" id="{{script.name}}" class="mdl-switch__input" name="{{script.name}}" 
+			         />
+			     </label>
+			    </span>
+			   
+			</li>
+		</ul>	
+	  </div>
+	  <div class="mdl-cell mdl-cell--6-col ">
+	  <form #form="ngForm"  (ngSubmit)="prepareScripts(form.value)" >
+	 
+	  	
+	  	<ul class="mdl-list"><li class="mdl-list__item mdl-list__item--two-line ">
+	  	<span class="mdl-list__item-primary-content ">
+				<i class="material-icons mdl-list__item-avatar md-icon dp48">email</i>
+				<span id="" >Email The Reports</span>
+		</span>
+		<span class="mdl-list__item-secondary-action">
+			<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="emailDiv">
+				<input type="checkbox" [(ngModel)]="activated" id="emailDiv" class="mdl-switch__input" name="emailDiv"/>
+			</label>
+		</span>
+	  </li></ul>
+
+	 
+	  
+
+	  <div class="email-Div" [ngClass]="{active:activated===false}">
+	  		<div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+	  			<input type="text" class="form-control mdl-textfield__input"  id="toEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="toEmail" ngModel>
+	  			<label class="mdl-textfield__label" for="toEmail">To: </label>
+      			<span class="mdl-textfield__error" >Email is not Correct..</span>
+	  		</div>
+	  		
+	  		<div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+	      		<input type="text" class="form-control mdl-textfield__input"  id="ccEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="ccEmail" ngModel>
+		  		<label class="mdl-textfield__label" for="ccEmail">CC: </label>
+	      		<span class="mdl-textfield__error" >Email is not Correct..</span>
+           	</div>
+        </div>
+	  		<button type="submit" style="margin-top: 5px;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	  			Execute
+	  		</button>
+	  </form>
+	  		
+	  </div>
+</div>
+
+<div class="script-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title logs">
+	  	<h2 class="mdl-card__title-text">Logs will be displayed here</h2>
+	  </div>
+	  <div id="log-viewer">
+	  	
+	  </div>
+</div>
+</div>

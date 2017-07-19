@@ -1,0 +1,33 @@
+
+.content {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+}
+
+.dashboard-card-wide.mdl-card {
+      width: 512px;
+    float: left;
+    /* padding-right: 5px; */
+    margin: 10px;
+}
+
+.dashboard-card-wide > .mdl-card__title{
+	color: #fff;
+	height: 176px;
+}
+
+.Selenium{
+	background: url('../../assets/images/SeleniumCard1.png') center / cover;
+}
+
+.PostMan{
+	background: url('../../assets/images/PostmanCard.jpg') center / cover;
+}
+
+.dashboard-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+

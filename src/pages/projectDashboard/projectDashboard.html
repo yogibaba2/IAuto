@@ -1,0 +1,36 @@
+<div class="content">
+	<div class="project-card mdl-card mdl-shadow--2dp">
+		<div class="mdl-card__title {{autoType}}">
+			<h2 class="mdl-card__title-text">{{autoType}}</h2>
+		</div>
+		<div class="project-list">
+			<ul class="mdl-list">
+				<li *ngFor="let project of projects" class="mdl-list__item mdl-list__item--two-line" (click)="gotoNext(project.name, projects.indexOf(project))">
+					<span class="mdl-list__item-primary-content">
+					 <i class="material-icons mdl-list__item-avatar {{autoType}}"></i>
+					 
+					 <span id="script-title" >{{project.name}}</span>
+					 <span class="mdl-list__item-sub-title">{{(project.scripts).length}} Scripts</span>
+					</span>
+					<!-- <ul class="sub-list mdl-list mdl-list__item-primary-content" [ngClass]="{active:activated===(projects.indexOf(project)+1)}">
+						<li *ngFor="let script of project.scripts" class="mdl-list__item mdl-list__item- -two-line">
+							<span class="mdl-list__item-primary-content">
+								<span id="script-title" >{{script.name}}</span>
+							</span>
+						</li>
+					</ul> -->
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- <script type="text/javascript">
+    function toggle_active(ele){
+        if(typeof document.getElementsByClassName('active')!='undefined'){
+            alert('bug');
+        document.getElementsByClassName('active').classList.remove('active');
+        }
+        ele.getElementsByTagName('ul').classList.add('active');
+    }
+</script> -->
+<!-- (click)="toggle_active(projects.indexOf(project)+1)" -->

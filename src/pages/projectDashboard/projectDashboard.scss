@@ -1,0 +1,71 @@
+.content {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+
+.Selenium{
+	background: url('../../assets/images/selenium.png') center / cover;
+}
+
+.PostMan{
+	background: url('../../assets/images/postman.png') center / cover;
+}
+
+.project-card.mdl-card {
+      width: 100%;
+    float: left;
+    /* padding-right: 5px; */
+    margin: 10px;
+}
+
+.project-card > .mdl-card__title{
+	color: #fff;
+	height: 60px;
+
+	-webkit-box-shadow: inset -5px -6px 11px -1px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset -5px -6px 11px -1px rgba(0,0,0,0.5);
+	box-shadow: inset -5px -6px 11px -1px rgba(0,0,0,0.5);
+}
+
+.project-card > .PostMan{
+	background: #2e110b; /* Old browsers */
+	background: -moz-linear-gradient(left, #2e110b 0%, #632518 34%, #d60300 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #2e110b 0%,#632518 34%,#d60300 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #2e110b 0%,#632518 34%,#d60300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e110b', endColorstr='#d60300',GradientType=1 ); /* IE6-9 */
+}
+
+.project-card > .Selenium{
+	background: #004430; /* Old browsers */
+	background: -moz-linear-gradient(left, #004430 0%, #2a6268 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #004430 0%,#2a6268 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #004430 0%,#2a6268 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004430', endColorstr='#2a6268',GradientType=1 ); /* IE6-9 */
+}
+
+.project-card > .mdl-card__menu {
+  color: #fff;
+}
+
+.mdl-list__item--two-line {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+}
+.mdl-list {
+    padding: 0px 0 !important;
+    margin: 0px 0px !important;
+}
+.sub-list{
+	position: absolute;
+	left:46.5%;
+	display: none;
+}
+.project-list li .active{
+	display: block;
+}
+
+.project-list{
+	width: 100%;
+}
